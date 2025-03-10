@@ -1,0 +1,81 @@
+---
+title: Getting Started
+---
+
+# Getting Started with ForgeStack
+
+Welcome to ForgeStack! This guide will help you set up and start using ForgeStack, a Firebase-focused stack template built with Next.js.
+
+## Installation
+
+To create a new project using ForgeStack, run the following command:
+
+```sh
+npx create-forgestack my-app
+cd my-app
+npm install
+```
+
+or using Yarn:
+
+```sh
+npx create-forgestack my-app
+cd my-app
+yarn install
+```
+
+## Project Structure
+
+After installation, your project will have the following structure:
+
+```plaintext
+my-app/
+├── public/      # Static assets
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── hooks/       # Custom Firebase hooks
+│   ├── pages/       # Next.js pages
+│   ├── styles/      # Global styles
+│   ├── utils/       # Utility functions
+├── .env.local   # Environment variables
+├── next.config.js  # Next.js configuration
+├── package.json  # Project dependencies
+└── README.md   # Project documentation
+```
+
+## Environment Variables
+
+Before running the app, configure your Firebase credentials in `.env.local`:
+
+```plaintext
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
+
+## Running the Development Server
+
+Once everything is set up, start the development server:
+
+```sh
+npm run dev
+```
+
+or
+
+```sh
+yarn dev
+```
+
+Your app will be available at `http://localhost:3000`.
+
+## Next Steps
+
+- Learn about [Authentication](./authentication)
+- Explore [Database Integration](./database)
+- Customize [Themes](./theming)
+
+Happy coding! 🚀
