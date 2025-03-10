@@ -37,8 +37,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <Layout
           banner={banner}
           navbar={navbar}
-          pageMap={pageMap} // Pass the sorted pageMap
-          docsRepositoryBase="https://github.com/tmonga2208/create-forgestack"
+          pageMap={pageMap}
+          docsRepositoryBase="https://github.com/tmonga2208/forgestackdocs/tree/master"
           footer={footer}
         >
           {children}
