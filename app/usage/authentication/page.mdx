@@ -1,0 +1,43 @@
+---
+title: Authentication
+---
+
+# Authentication in ForgeStack
+
+ForgeStack provides built-in support for Firebase Authentication, allowing you to easily manage user sign-in, sign-up, and authentication state.
+
+## Using the `useAuth` Hook
+
+ForgeStack includes a custom authentication hook, `useAuth.ts`, which simplifies user authentication.
+
+### Example Usage:
+
+```tsx
+import { handleGoogleAuth, handleLogout } from "@/hooks/useAuth";
+import { useUser } from "@/context/usercontext";
+
+export default function AuthExample(){
+  const { user } = useUser();
+  return (
+    <div>
+      {user ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <button onClick={handleGoogleAuth}>Sign in with Google</button>
+      )}
+    </div>
+  );
+}
+
+```
+
+## Features of `useAuth.ts`
+- **Google Authentication** – Sign in with Google using Firebase.
+- **User Authentication Handling** – Supports email/password sign-in and sign-up.
+- **Sign-Out Support** – Allows users to log out easily.
+
+## Next Steps
+- [Database Integration](./usage/database)
+- [Storage Usage](./usage/storage)
+
+Now your app is ready to authenticate users seamlessly! 🚀

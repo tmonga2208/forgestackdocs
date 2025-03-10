@@ -32,12 +32,11 @@ After installation, your project will have the following structure:
 my-app/
 ├── public/      # Static assets
 ├── src/
-│   ├── components/  # Reusable UI components
+│   ├── components/  # Reusable ShadCN UI components
+│   ├── context/     # User Contexts
 │   ├── hooks/       # Custom Firebase hooks
-│   ├── pages/       # Next.js pages
 │   ├── styles/      # Global styles
-│   ├── utils/       # Utility functions
-├── .env.local   # Environment variables
+│   ├── lib/         # Configuration files 
 ├── next.config.js  # Next.js configuration
 ├── package.json  # Project dependencies
 └── README.md   # Project documentation
@@ -45,9 +44,9 @@ my-app/
 
 ## Environment Variables
 
-Before running the app, configure your Firebase credentials in `.env.local`:
+Before running the app, configure your Firebase credentials in `.env`:
 
-```plaintext
+```
 NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
