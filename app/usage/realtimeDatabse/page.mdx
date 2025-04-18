@@ -1,0 +1,63 @@
+---
+title: Realtime Database
+---
+
+import { CodeBlock } from 'nextra/components'
+
+# Realtime Database in ForgeStack
+
+ForgeStack supports Firebase Realtime Database with a clean, consistent API for performing operations like add, read, update, delete, and real-time subscriptions.
+
+---
+
+## Using the `useRealtimeDB.ts`
+
+This helper provides utility functions to interact with the Realtime Database using a consistent `FirebaseResult` response format.
+
+---
+
+## Example Usage
+
+```tsx
+import {
+  addData,
+  getData,
+  deleteData,
+  updateData,
+  subscribeToData,
+} from "@/hooks/realtimeDatabase";
+import { getDatabase } from "firebase/database";
+
+const db = getDatabase();
+
+interface Session {
+  userId: string;
+  active: boolean;
+}
+
+// Add a session
+await addData<Session>(db, "sessions/session123", {
+  userId: "user001",
+  active: true,
+});
+
+// Get a session
+const result = await getData<Session>(db, "sessions/session123");
+if (result.success && result.data) {
+  console.log("Session data:", result.data);
+}
+
+// Update a session
+await updateData<Session>(db, "sessions/session123", {
+  active: false,
+});
+
+// Delete a session
+await deleteData(db, "sessions/session123");
+
+// Subscribe to session changes
+subscribeToData<Session | null>(db, "sessions/session123", (data) => {
+  console.log("Live session update:", data);
+});
+
+```

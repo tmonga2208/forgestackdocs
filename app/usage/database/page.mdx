@@ -2,4 +2,49 @@
 title: Firestore Database
 ---
 
+import { CodeBlock } from 'nextra/components'
+
 # Database in ForgeStack
+
+ForgeStack provides built-in support for Firebase Firestore, allowing you to easily perform type-safe database operations like adding, reading, and deleting documents.
+
+---
+
+## Using the `useDatabase.ts`
+
+The `useDatabase.ts` utility wraps common Firestore operations in simplified, reusable functions that return consistent results with success, data, or error fields.
+
+---
+
+## Example
+
+```tsx
+import { addData, getData, deleteData } from "@/hooks/useDatabase";
+
+interface User {
+  name: string;
+  email: string;
+}
+
+// Add a user
+await addData<User>("users/user123", {
+  name: "Name",
+  email: "name@example.com",
+});
+
+// Get a user
+const result = await getData<User>("users/user123");
+if (result.success && result.data) {
+  console.log("User email:", result.data.email);
+}
+
+// Delete a user
+await deleteData("users/user123");
+
+```
+
+## Features
+- Add or update Firestore documents with addData
+- Fetch documents with type safety using getData
+- Delete documents with deleteData
+- Integrates smoothly with ForgeStack authentication

@@ -1,0 +1,10 @@
+.main-logo{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+.main-logo b{
+    padding: 10px;
+    font-size: larger;
+}

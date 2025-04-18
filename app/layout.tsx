@@ -3,6 +3,8 @@ import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import { ReactNode } from 'react';
+import Image from 'next/image';
+import "./new_styles.css"
 
 
 export const metadata = {
@@ -12,7 +14,7 @@ export const metadata = {
 const banner = <Banner storageKey="some-key">ForgeStack 1.3.0 is released 🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<b>ForgeStack</b>}
+    logo={<div className='main-logo'><Image src="/logo.png" alt='logo' height={40} width={40} /><b>ForgeStack</b></div>}
   />
 )
 const footer = <Footer>MIT {new Date().getFullYear()} © ForgeStack.</Footer>
