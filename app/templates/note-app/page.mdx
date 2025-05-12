@@ -1,0 +1,155 @@
+---
+title: Noti - Firebase-Powered Note Taking App
+description: Download and set up your own instance of Noti
+---
+
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
+import "../../new_styles.css";
+
+# Noti: Your Personal Note-Taking Solution
+
+## Overview
+
+Noti is a powerful, cloud-based note-taking application built with Next.js and Firebase, designed to provide a seamless note-taking experience across devices.
+
+## Screenshots
+
+### Dashboard View
+
+![NoteSync Dashboard](/image.png)
+A clean, intuitive interface for managing your notes efficiently.
+
+### Note Editing
+
+![Note Editing Interface](/img2.png)
+Rich text editing with real-time synchronization.
+
+### Mobile Responsive
+
+<div className="mobile">
+  <img
+    src="/img3.png"
+    alt="Mobile View"
+    style={{ height: "300px", width: "auto" }}
+  />
+</div>
+Fully responsive design that works perfectly on all devices.
+
+## Demo Video
+
+### Full Application Walkthrough
+
+<div>
+  <iframe
+    className="hero"
+    width="100%"
+    height="300"
+    src="https://www.youtube.com/embed/bE-5UZHbKxg"
+    title="NoteSync App Walkthrough"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## Quick Start Guide
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm or Yarn
+- Firebase Account
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/notesync.git
+cd notesync
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Firebase
+
+1. In Firebase Console, go to Project Settings
+2. Click "Add app" and select Web
+3. Register your app and copy the configuration
+
+#### Create `.env` File
+
+```bash
+# In your project root
+touch .env
+```
+
+Add your Firebase configuration:
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+### 4. Run the Development Server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Features
+
+- Real-time note synchronization
+- User authentication
+- Rich text editing
+- Cloud storage
+- Responsive design
+- Offline support
+- Customizable note organization
+- LocalStorage Support
+
+## Tech Stack
+
+- Next.js
+- React
+- Firebase
+- Tailwind CSS
+- TypeScript
+
+## Deployment
+
+### Vercel (Recommended)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tmonga2208/note-take)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Support
+
+Having issues? [Open an issue](https://github.com/tmonga2208/note-take/issues) on GitHub.
+
+## Links
+
+- [GitHub Repository](https://github.com/tmonga2208/note-take)

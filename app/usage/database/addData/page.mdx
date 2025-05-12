@@ -1,0 +1,26 @@
+---
+title: Add Data
+---
+
+```
+const addData = async <T extends Record<string, unknown>>(collectionPath: string, data: T): Promise<FirebaseResult> => {
+  try {
+    const newDocRef = doc(collection(db, collectionPath)); 
+    await setDoc(newDocRef, data);
+    return { success: true };
+  } catch (error) {
+    return { success: false, error };
+  }
+};
+```
+This is The Code in The Template 
+
+Here is How To Use It
+
+Example Usage:
+```tsx
+await addData<User>("users", {
+            name: name,
+            email: email,
+});
+```

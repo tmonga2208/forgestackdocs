@@ -20,15 +20,14 @@ This helper provides utility functions to interact with the Realtime Database us
 
 ```tsx
 import {
+  db,
   addData,
   getData,
   deleteData,
   updateData,
   subscribeToData,
 } from "@/hooks/realtimeDatabase";
-import { getDatabase } from "firebase/database";
 
-const db = getDatabase();
 
 interface Session {
   userId: string;

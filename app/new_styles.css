@@ -8,3 +8,21 @@
     padding: 10px;
     font-size: larger;
 }
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin: 4%;
+}
+
+.mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile img{
+    margin-top: 20px;
+}

@@ -1,0 +1,26 @@
+---
+title: Delete Data
+---
+
+```
+const deleteData = async (path: string): Promise<FirebaseResult> => {
+  try {
+    await deleteDoc(doc(db, path));
+    return { success: true };
+  } catch (error) {
+    return { success: false, error };
+  }
+};
+```
+
+This is Code
+
+To Use It
+
+Example Usage:
+```tsx
+const handleDelete = (uid: string) => {
+        deleteData(`users/${uid}`);
+        fetchData();
+}
+```

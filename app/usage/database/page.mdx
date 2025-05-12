@@ -27,9 +27,9 @@ interface User {
 }
 
 // Add a user
-await addData<User>("users/user123", {
-  name: "Name",
-  email: "name@example.com",
+await addData<User>("users", {
+            name: "name",
+            email: "email",
 });
 
 // Get a user
@@ -37,6 +37,19 @@ const result = await getData<User>("users/user123");
 if (result.success && result.data) {
   console.log("User email:", result.data.email);
 }
+
+//Get All Users (From Firestore)
+useEffect(() => {
+        const fetchData = async () => {
+            const result = await getCollection<User[]>("users");
+            if (result.success) {
+                setList(result.data);
+            } else {
+                console.error(result.error);
+            }
+        };
+        fetchData();
+    }, []); 
 
 // Delete a user
 await deleteData("users/user123");

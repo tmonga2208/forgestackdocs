@@ -20,7 +20,7 @@ const navbar = (
 const footer = <Footer>MIT {new Date().getFullYear()} © ForgeStack.</Footer>
 
 // Define sidebar order
-const sidebarOrder = ["introduction", "getting-started", "usage"];
+const sidebarOrder = ["introduction", "getting-started", "usage" ,"templates"];
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
 
